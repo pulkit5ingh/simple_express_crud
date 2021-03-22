@@ -3,7 +3,6 @@ const app = express()
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const cors = require('cors')
-const port = 5000
 
 // cors
 app.use(cors())
@@ -23,6 +22,8 @@ mongoose
 // routes 
 app.use('/', require('./routes/index'));
 
-app.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`)
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+    console.log(`Example app listening at http://localhost:${PORT}`)
 })
