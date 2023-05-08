@@ -13,7 +13,7 @@ app.use(bodyParser.json())
 // Connection to MongoDB
 mongoose
     .connect(
-        'mongodb+srv://MyUsername:MyPassword@mycluster.rkncu.mongodb.net/MernTodo?retryWrites=true&w=majority',
+        'mongodb+srv://username:password@mycluster.rkncu.mongodb.net/MernTodo?retryWrites=true&w=majority',
         { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false }
     )
     .then(() => console.log('MongoDB Connected'))
