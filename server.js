@@ -13,7 +13,7 @@ app.use(bodyParser.json())
 // Connection to MongoDB
 mongoose
     .connect(
-        'mongodb+srv://username:password@mycluster.rkncu.mongodb.net/MernTodo?retryWrites=true&w=majority',
+        'mongodb+srv://superuser:5Jaw5fd71acfcW9L@cluster0.tc0avtk.mongodb.net/MernTodo?retryWrites=true&w=majority',
         { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false }
     )
     .then(() => console.log('MongoDB Connected'))
@@ -22,7 +22,7 @@ mongoose
 // routes 
 app.use('/', require('./routes/index'));
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
     console.log(`Example app listening at http://localhost:${PORT}`)
